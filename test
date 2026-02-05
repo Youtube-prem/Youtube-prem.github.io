@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>YouTube Premium 회원 모집</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Premium 안내 및 참여 문의</title>
+  <meta name="description" content="YouTube Premium 혜택 안내 및 공식 가입/문의 페이지" />
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", Arial, sans-serif;
-      background-color: #f5f5f7;
-      margin: 0;
-      padding: 0;
+    :root{
+      --bg:#f5f5f7;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --accent:#ef4444; /* red */
+      --accent2:#111827;
+      --radius:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --max: 980px;
     }
-    .container {
-      max-width: 600px;
-      margin: 60px auto;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:-apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg, #fff, var(--bg));
     }
-    h1 {
-      text-align: center;
-      color: #ff0000;
+    a{ color:inherit; }
+    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 16px 80px; }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 2px;
     }
-    p {
-      line-height: 1.6;
-      color: #333;
+    .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:-.2px; }
+    .badge{
+      font-size:12px; padding:4px 8px; border:1px solid var(--line); border-radius:999px;
+      color:var(--muted); background:#fff;
     }
-    .info {
-      background: #f0f0f0;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
+    .nav a.btn{
+      text-decoration:none; padding:10px 12px; border-radius:12px; border:1px solid var(--line);
+      background:#fff;
     }
-    .button {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background: #ff0000;
-      color: white;
-      padding: 14px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
+
+    .hero{
+      margin-top:18px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px 20px;
     }
-    .footer {
-      text-align: center;
-      font-size: 13px;
-      color: #777;
-      margin-top: 20px;
+    .hero-grid{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px; align-items:start;
     }
-  </style>
-</head>
-<body>
+    h1{ margin:0 0 10px; font-size:28px; letter-spacing:-.5px; }
+    .sub{ color:var(--muted); margin:0 0 16px; line-height:1.6; }
+    .cta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+    .cta{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius:14px; text-decoration:none; font-weight:700;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+    .cta.primary{
+      background:var(--accent);
+      border-color:transparent;
+      color:#fff;
+    }
+    .cta.secondary{
+      background:#111827;
+      border-color:transparent;
+      color:#fff;
+    }
 
-  <div class="container">
-    <h1>YouTube Premium 회원 모집</h1>
+    .panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
+    }
+    .panel h3{ margin:0 0 8px; font-size:16px; }
+    .kvs{ display:grid; gap:10px; margin-top:10px; }
+    .kv{ border:1px solid var(--line); border-radius:14px; padding:12px; background:#fafafa; }
+    .kv b{ display:block; font-size:13px; color:var(--muted); margin-bottom:4px; }
+    .kv span{ font-weight:800; letter-spacing:-.2px; }
 
-    <p>
-      광고 없이 YouTube를 시청하고,<br>
-      백그라운드 재생과 YouTube Music까지 이용하고 싶으신 분들을 모집합니다.
-    </p>
-
-    <div class="info">
-      <p><strong>✔ 이용 혜택</strong></p>
-      <ul>
-        <li>광고 없는 YouTube 시청</li>
-        <li>백그라운드 재생</li>
-        <li>YouTube Music 포함</li>
-      </ul>
-
-      <p><strong>✔ 모집 조건</strong></p>
-      <ul>
-        <li>장기 이용 가능하신 분</li>
-        <li>연락 원활하신 분</li>
-      </ul>
-    </div>
-
-    <p>
-      참여를 원하시면 아래 버튼을 눌러 연락 주세요.
-    </p>
-
-    <!-- 연락처 링크 수정 가능 -->
-    <a class="button" href="https://open.kakao.com/o/gBpNh0ei">
-      참여 문의하기
-    </a>
-
-    <div class="footer">
-      <p>※ 개인 간 모집 페이지입니다.</p>
-    </div>
-  </div>
-
-</body>
-</html>
+    .section{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.05);
