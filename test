@@ -96,3 +96,308 @@
       border-radius:var(--radius);
       padding:18px 16px;
       box-shadow: 0 6px 18px rgba(0,0,0,.05);
+    }
+    .card h2{ margin:0 0 10px; font-size:18px; }
+    .card p{ margin:0; color:var(--muted); line-height:1.7; }
+    ul{ margin:10px 0 0; padding-left:18px; color:var(--text); }
+    li{ margin:6px 0; color:var(--text); }
+
+    .full{
+      margin-top:14px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px 16px;
+    }
+    .full h2{ margin:0 0 10px; font-size:18px; }
+    .grid2{
+      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
+    }
+
+    .faq details{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 12px;
+      background:#fafafa;
+      margin:10px 0;
+    }
+    .faq summary{
+      cursor:pointer;
+      font-weight:800;
+      list-style:none;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq p{ margin:10px 0 0; color:var(--muted); line-height:1.7; }
+
+    .form{
+      margin-top:12px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .form .row2{ grid-column: 1 / -1; }
+    label{ display:block; font-size:12px; color:var(--muted); margin:0 0 6px; font-weight:700; }
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      font-size:14px;
+      outline:none;
+      background:#fff;
+    }
+    textarea{ min-height:110px; resize:vertical; }
+    .actions{
+      margin-top:10px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    button{
+      border:0;
+      border-radius:14px;
+      padding:12px 14px;
+      font-weight:800;
+      cursor:pointer;
+    }
+    button.primary{ background:var(--accent); color:#fff; }
+    button.ghost{ background:#fff; border:1px solid var(--line); }
+
+    .note{
+      margin-top:16px;
+      border-top:1px dashed var(--line);
+      padding-top:14px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.7;
+    }
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+    @media (max-width: 820px){
+      .hero-grid{ grid-template-columns:1fr; }
+      .section{ grid-template-columns:1fr; }
+      .grid2{ grid-template-columns:1fr; }
+      .form{ grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <span>Premium 안내</span>
+        <span class="badge">공식 가입/문의</span>
+      </div>
+      <a class="btn" href="#contact">문의하기</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>YouTube Premium, 이렇게 쓰면 편합니다</h1>
+          <p class="sub">
+            광고 없이 시청, 백그라운드 재생, 오프라인 저장 등 핵심 기능을 빠르게 정리했습니다.
+            아래 버튼으로 <b>공식 경로 가입</b> 또는 <b>궁금한 점 문의</b>가 가능합니다.
+          </p>
+
+          <div class="cta-row">
+            <!-- 공식 가입 링크로 바꾸세요(아래 href) -->
+            <a class="cta primary" href="https://www.youtube.com/premium" target="_blank" rel="noopener">
+              공식 가입 페이지 열기
+            </a>
+            <a class="cta secondary" href="#benefits">혜택 보기</a>
+            <a class="cta" href="#faq">FAQ</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>빠른 요약</h3>
+          <div class="kvs">
+            <div class="kv">
+              <b>추천 대상</b>
+              <span>광고·백그라운드·음악을 자주 쓰는 분</span>
+            </div>
+            <div class="kv">
+              <b>가입 방법</b>
+              <span>공식 페이지에서 결제/해지 가능</span>
+            </div>
+            <div class="kv">
+              <b>문의</b>
+              <span>아래 폼으로 연락</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <div id="benefits" class="section">
+      <div class="card">
+        <h2>핵심 혜택</h2>
+        <p>자주 쓰는 기능 위주로만 추렸습니다.</p>
+        <ul>
+          <li>광고 없이 시청</li>
+          <li>백그라운드 재생(화면 꺼도 재생)</li>
+          <li>오프라인 저장</li>
+          <li>YouTube Music 이용(지역/요금제에 따라 상이)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>가입 전 체크</h2>
+        <p>불필요한 오해/분쟁을 줄이려면 아래를 권장합니다.</p>
+        <ul>
+          <li>결제/해지는 <b>공식 페이지</b>에서 직접 진행</li>
+          <li>요금/구성은 국가·프로모션에 따라 달라질 수 있음</li>
+          <li>이 페이지는 혜택 안내 및 문의용이며, 계정 공유/재판매를 중개하지 않음</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- HOW TO -->
+    <section class="full">
+      <h2>가입 절차(간단)</h2>
+      <div class="grid2">
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:16px; margin-bottom:8px;">1) 공식 페이지 접속</h2>
+          <p>상단 “공식 가입 페이지 열기” 버튼을 눌러 진행합니다.</p>
+        </div>
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:16px; margin-bottom:8px;">2) 결제 수단 선택</h2>
+          <p>카드/인앱 결제 등 가능한 옵션 중 선택합니다.</p>
+        </div>
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:16px; margin-bottom:8px;">3) 이용 시작</h2>
+          <p>가입이 완료되면 즉시 혜택이 적용됩니다.</p>
+        </div>
+        <div class="card" style="box-shadow:none;">
+          <h2 style="font-size:16px; margin-bottom:8px;">4) 해지/변경</h2>
+          <p>필요 시 공식 페이지에서 언제든 해지/변경 가능합니다.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <b>안내:</b> 이 페이지는 정보 제공 및 문의용입니다. 서비스 정책을 위반할 수 있는 계정 공유/양도/재판매 형태의 모집·중개는 다루지 않습니다.
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="full faq">
+      <h2>FAQ</h2>
+
+      <details>
+        <summary>Q. 무료 체험이 있나요?</summary>
+        <p>프로모션/지역/계정 상태에 따라 다를 수 있어요. 가장 정확한 건 공식 페이지에서 확인하는 방식입니다.</p>
+      </details>
+
+      <details>
+        <summary>Q. 요금이 매번 같은가요?</summary>
+        <p>국가, 환율, 프로모션, 결제 경로에 따라 차이가 날 수 있어요. 가입 화면에 표시된 금액이 기준입니다.</p>
+      </details>
+
+      <details>
+        <summary>Q. 해지는 어떻게 하나요?</summary>
+        <p>공식 결제 관리 화면에서 해지 가능합니다. 인앱 결제(예: App Store)로 가입했으면 해당 스토어 구독 관리에서 해지해야 합니다.</p>
+      </details>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="full">
+      <h2>문의하기</h2>
+      <p class="sub" style="margin-top:0;">
+        질문/상담이 필요하면 아래 폼을 작성 후 전송하세요. (메일 앱이 열리도록 구성)
+      </p>
+
+      <form class="form" id="contactForm">
+        <div>
+          <label for="name">이름(또는 닉네임)</label>
+          <input id="name" name="name" placeholder="홍길동" required />
+        </div>
+        <div>
+          <label for="contactInfo">연락처(이메일/카톡ID 등)</label>
+          <input id="contactInfo" name="contactInfo" placeholder="example@email.com" required />
+        </div>
+        <div class="row2">
+          <label for="msg">문의 내용</label>
+          <textarea id="msg" name="msg" placeholder="궁금한 점을 적어주세요." required></textarea>
+        </div>
+
+        <div class="row2 actions">
+          <button type="submit" class="primary">메일로 전송</button>
+          <button type="button" class="ghost" id="copyBtn">문의내용 복사</button>
+        </div>
+      </form>
+
+      <div class="note">
+        <b>메일 수신 주소 설정:</b> 아래 스크립트의 <code>TO_EMAIL</code> 값을 본인 이메일로 바꾸세요.
+      </div>
+    </section>
+
+    <div class="footer">
+      © <span id="y"></span> 안내 페이지 · 업데이트는 언제든 가능
+    </div>
+  </div>
+
+  <script>
+    // ✅ 여기만 본인 이메일로 바꾸면 됨
+    const TO_EMAIL = "https://open.kakao.com/o/gBpNh0ei";
+
+    const form = document.getElementById("contactForm");
+    const copyBtn = document.getElementById("copyBtn");
+    const y = document.getElementById("y");
+    y.textContent = new Date().getFullYear();
+
+    function buildMailto(name, contactInfo, msg){
+      const subject = `[문의] Premium 안내 페이지 - ${name}`;
+      const body =
+`이름/닉네임: ${name}
+연락처: ${contactInfo}
+
+문의 내용:
+${msg}
+
+(이 메일은 웹페이지 문의 폼에서 생성되었습니다.)`;
+
+      const url = `mailto:${encodeURIComponent(TO_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      return url;
+    }
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const contactInfo = document.getElementById("contactInfo").value.trim();
+      const msg = document.getElementById("msg").value.trim();
+
+      if(!name || !contactInfo || !msg){
+        alert("모든 항목을 입력하세요.");
+        return;
+      }
+      window.location.href = buildMailto(name, contactInfo, msg);
+    });
+
+    copyBtn.addEventListener("click", async () => {
+      const name = document.getElementById("name").value.trim();
+      const contactInfo = document.getElementById("contactInfo").value.trim();
+      const msg = document.getElementById("msg").value.trim();
+
+      const text =
+`[문의 요약]
+이름/닉네임: ${name}
+연락처: ${contactInfo}
+내용: ${msg}`;
+
+      try{
+        await navigator.clipboard.writeText(text);
+        alert("복사 완료. 원하는 곳에 붙여넣으세요.");
+      }catch(err){
+        alert("복사에 실패했습니다. 브라우저 권한을 확인하세요.");
+      }
+    });
+  </script>
+</body>
+</html>
